@@ -1,4 +1,4 @@
-(function() { 
+void(function() { 
     localDownload = function(data, filename){
 
         if(!data) {
@@ -72,9 +72,9 @@
     var agCount   = document.querySelectorAll(qsw(ag_ids)).length - winCount - unixCount;
 
     //build arrays
-    var policiesArray     = arrayBuilder([],ag_ids, 86);
-    var winPoliciesArray  = arrayBuilder([],win_ids, 1);
-    var unixPoliciesArray = arrayBuilder([],unix_ids, 1);
+    var policiesArray     = arrayBuilder([],ag_ids, agCount);
+    var winPoliciesArray  = arrayBuilder([],win_ids, winCount);
+    var unixPoliciesArray = arrayBuilder([],unix_ids, unixCount);
 
     //concatenate arrays for each os
     var allWinPoliciesArray  = policiesArray.concat(winPoliciesArray);
